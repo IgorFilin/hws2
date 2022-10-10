@@ -2,34 +2,119 @@
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    flex-direction: row;
 }
 
 .error {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 17px;
+    color: #CC0000;
 }
 
 .input {
+    width: 372px;
+    height: 36px;
+    border: 2px solid #D1D1D1;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 10px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .input:focus {
 }
 
 .errorInput {
+    width: 372px;
+    height: 36px;
+    border: 2px solid #CC0000;
+    border-radius: 10px;
+
 }
 
 .button {
+    margin-left: 12px;
+    align-items: center;
+    padding: 5px 24px;
+    gap: 10px;
+    width: 78px;
+    height: 36px;
+    background: #0066CC;
+    opacity: 0.8;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    transition: 1s;
 }
 
-.button:focus {
+.button:hover {
+    margin-left: 12px;
+    padding: 5px 24px;
+    gap: 10px;
+    width: 78px;
+    height: 36px;
+    background: #abb5bf;
+    opacity: 1;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    transition: 1s;
 }
 
-.button:active {
-}
 
 .button:disabled {
+    margin-left: 12px;
+    align-items: center;
+    padding: 5px 24px;
+    gap: 10px;
+    width: 78px;
+    height: 36px;
+    background: #0066CC;
+    opacity: 0.2;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    transition: 1s;
 }
 
 .text {
+    font-family: 'Montserrat';
+    padding: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .greeting {
+    width: 144px;
+    height: 17px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
 }
