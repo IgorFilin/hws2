@@ -36,12 +36,27 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
+                setText(`${res.data.errorText}${'\n'}${res.data.info}`)
                 // дописать
-
             })
             .catch((e) => {
                 // дописать
-
+                if (e.response.status === 500) {
+                    setCode('500')
+                    setImage(error500)
+                    setText(`${e.response.data.errorText}${'\n'}${e.response.data.info}`)
+                } else if (e.response.status === 400) {
+                    setCode('400')
+                    setImage(error400)
+                    setText(`${e.response.data.errorText}${'\n'}${e.response.data.info}`)
+                } else if (!e.response.status) {
+                    setCode('0')
+                    setImage(errorUnknown)
+                    setText(`Nework Error`)
+                }
+            })
+            .finally(() => {
+               setInfo('')
             })
     }
 
@@ -56,7 +71,7 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
-
+                        disabled={!!info}
                     >
                         Send true
                     </SuperButton>
@@ -65,7 +80,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         // дописать
-
+                        disabled={!!info}
                     >
                         Send false
                     </SuperButton>
@@ -74,7 +89,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
-
+                        disabled={!!info}
                     >
                         Send undefined
                     </SuperButton>
@@ -83,7 +98,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
-
+                        disabled={!!info}
                     >
                         Send null
                     </SuperButton>
