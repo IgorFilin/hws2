@@ -56,7 +56,7 @@ const HW13 = () => {
                 }
             })
             .finally(() => {
-               setInfo('')
+                setTimeout(()=> setInfo(''),2000)
             })
     }
 
