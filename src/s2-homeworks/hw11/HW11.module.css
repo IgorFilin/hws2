@@ -2,7 +2,17 @@
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
 }
 
 .number {
+    margin: 0 12px 0 12px;
 }

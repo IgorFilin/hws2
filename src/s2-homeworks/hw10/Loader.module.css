@@ -2,7 +2,7 @@
 .loader {
     position: relative;
     width: 100px;
-    height: 200px;
+    height:100px;
     background: #FFFFFF;
     background: radial-gradient(#FFFFFF, #FFFFFF);
     bottom: 0;
@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 .loaderLineWrap {
