@@ -50,7 +50,7 @@ const HW13 = () => {
                 } else if (e.response.status === 400) {
                     setCode('400')
                     setImage(error400)
-                    setText(`${e.response.data.errorText}${'\n'}${e.response.data.info}`)
+                    setText(`${e.response.data.errorText}`)
                     setTimeout(()=>setInfo(`${e.response.data.info}`),2000)
                 } else if (!e.response.status) {
                     setCode('0')
